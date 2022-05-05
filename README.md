@@ -1,10 +1,14 @@
 # word-search
-Initial Comments:\n
-Running in Python 3.10.2 \n
-Assume grid is one long string: for such a large grid this uses less memory than a python (linked) list, but this shouldn't matter\n
+Initial Comments:
 
-My initial thoughts were rather straight forward. This problem is slightly easier split up into 2 segments.\n
-1) Check the grid horizontally. We do this by looping through each row, and checking if a given letter could be the start letter of the word. If it can, iteratively check the next letters in the word. If any of these fail, break and continue checking. If we reach the end of this iterative process and it hasn't broken, we must have found so instantly return True.\n
+Running in Python 3.10.2
+
+Assume grid is one long string: for such a large grid this uses less memory than a python (linked) list, but this shouldn't matter
+
+
+My initial thoughts were rather straight forward. This problem is slightly easier split up into 2 segments.
+
+1) Check the grid horizontally. We do this by looping through each row, and checking if a given letter could be the start letter of the word. If it can, iteratively check the next letters in the word. If any of these fail, break and continue checking. If we reach the end of this iterative process and it hasn't broken, we must have found so instantly return True.
 2) Check the grid vertically. This segment was a little more involved however here is my thinking:
     - We need to loop through the column, simply adding a ROW_LENGTH to get to the next one in the column
     - We don't need to start from letters which are less than len(word) rows from the bottom of the grid
@@ -24,6 +28,7 @@ Theoretically, this will reduce runtime by a factor of num_threads, but there wi
 
 
 This took me maybe 2 hours overall including formatting, cleaning up code, commenting, and multiprocessing (and some procrastination)
+
 Main implementation ~30 mins?
 
 Average/Worst case runtime = O(m * n^2) (Where m = number of words, n = ROW_LENGTH)
