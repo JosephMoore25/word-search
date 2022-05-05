@@ -27,7 +27,7 @@ In this instance, we can achieve data parallelisation easily by simply splitting
 Theoretically, this will reduce runtime by a factor of num_threads, but there will be a little bit of overhead on this.
 
 
-This took me maybe 2 hours overall including formatting, cleaning up code, commenting, and multiprocessing (and some procrastination)
+This took me maybe 2 hours overall including formatting, cleaning up code, commenting, and multiprocessing
 
 Main implementation ~30 mins?
 
